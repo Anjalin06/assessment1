@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function items(){
+            var name = document.getElementById("myList").value;
+            if(name == "Mobiles")
+            {
+                var Name = ['samsung','lenovo','nokia'];
+                document.getElementById("display").innerHTML = Name.join("<br>");
+            }
+            else if(name == "Laptops")
+            {
+                var Name = ['samsung','lenovo', 'acer'];
+                document.getElementById("display").innerHTML = Name.join("<br>");
+            }
+            else if(name == "cars")
+            {
+                var Name = ['mercedes','audi','maruthi'];
+                document.getElementById("display").innerHTML = countryName.join("<br>");
+            }
+            
+        }
+    </script>
+</head>
+<body>
+<iv>
+    items <select name="list" id="myList" onselect="">
+        <option selected="" value="Default">--Select--</option>
+        <option value="Mobiles">mobiles</option>
+        <option value="Laptops">laptops</option>
+        <option value="cars">cars</option>
+        
+    </select>
+    <input type="button" onClick="items()" value="GO" />
+</div>
+</body>
+</html>
