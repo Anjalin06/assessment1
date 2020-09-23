@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate(){
+        var students=["Anjali","Manisha","Rithu","Ram"];  
+        username = document.myform.uname.value;
+        passwd = document.myform.pass.value;
+        number = document.myform.number.value;
+        email=document.myform.email.value;
+        city=document.myform.city.value;
+    
+	if(username ==""||username.length<5||username.length>15){
+		alert("enter your name");
+        document.myform.uname.value="";
+		document.myform.uname.focus();   
+	}
+     else if (passwd ==""||(!passwd.match( ("^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])"))))
+     {
+		alert("Your password must contain lowercase,uppercase,number and special characters");
+		document.myform.pass.value="";
+		document.myform.pass.focus();
+	}
+        else if (email ==""){
+		alert("Enter your Email");
+		document.myform.email.value="";
+		document.myform.email.focus();
+    }
+    else if (number ==""|| number.length>10){
+		alert("enter valid number");
+		document.myform.number.value="";
+		document.myform.number.focus();
+    }
+    else if (city ==""){
+		alert("Enter your city");
+		document.myform.city.value="";
+		document.myform.city.focus();
+    }
+    else{
+        for (i=0;i<students.length;i++)
+        { 
+            if(username == students[i]) {
+                alert("Hello"+username);
+                document.myform.value();}
+        }
+		document.getElementById("myid").innerHTML="You are registered";   
+	}   
+}
+</script>
+</head>
+<body>
+    <form action="" method="GET" name="myform" id="myid">
+        <table>
+            <tr><td>Name</td><td colspan="2"><input type="text" name="uname"  ><br></td></tr>
+            <tr><td>Password </td><td colspan="2"><input type="password" name="pass" ><br></td> </tr>
+            <tr><td>Email-ID </td><td colspan="2"><input type="email" name="email" ><br></td> </tr>
+            <tr><td>Phone number </td><td colspan="2"><input type="number"  name="number" ><br></td> </tr>
+            <tr><td>city </td><td colspan="2"><input type="text"  name="city" ><br></td> </tr>
+            <tr><td><input type="button" value="Register " onclick= "validate()" ></td></tr>
+        </table>
+    </form>
+</body>
+</html>
