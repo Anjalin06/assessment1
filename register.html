@@ -7,18 +7,14 @@
     <script>
         function validate(){
         var students=["Anjali","Manisha","Rithu","Ram"];  
-        username = document.myform.uname.value;
-        passwd = document.myform.pass.value;
-        number = document.myform.number.value;
-        email=document.myform.email.value;
-        city=document.myform.city.value;
+      
     
 	if(username ==""||username.length<5||username.length>15){
 		alert("enter your name");
         document.myform.uname.value="";
 		document.myform.uname.focus();   
 	}
-     else if (passwd ==""||(!passwd.match( ("^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])"))))
+     else if (passwd ==""||(!passwd.match("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})")))
      {
 		alert("Your password must contain lowercase,uppercase,number and special characters");
 		document.myform.pass.value="";

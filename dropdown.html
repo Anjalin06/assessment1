@@ -20,22 +20,23 @@
             else if(name == "cars")
             {
                 var Name = ['mercedes','audi','maruthi'];
-                document.getElementById("display").innerHTML = countryName.join("<br>");
+                document.getElementById("display").innerHTML = Name.join("<br>");
             }
             
         }
     </script>
 </head>
 <body>
-<iv>
-    items <select name="list" id="myList" onselect="">
+<div>
+    items <select name="list" id="myList" onchange="items()">
         <option selected="" value="Default">--Select--</option>
         <option value="Mobiles">mobiles</option>
         <option value="Laptops">laptops</option>
         <option value="cars">cars</option>
         
     </select>
-    <input type="button" onClick="items()" value="GO" />
-</div>
+   
+</div><br>
+<div><span id="display" ></span></div>
 </body>
 </html>

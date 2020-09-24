@@ -1,0 +1,21 @@
+[
+    {
+        "name":"ABC",
+        "city":"mysuru",
+        "type":["veg"],
+        "cuisine":["Indian"]
+    } ,
+    {
+        "name":"Otera",
+        "city":"Bangalore",
+        "type":["nonveg"],
+        "cuisine":["Chinese"] 
+    },
+    {
+        "name":"Taj",
+        "city":"Delhi",
+        "type":["veg"],
+        "cuisine":["Indian"]
+    }
+]
+    
